@@ -32,7 +32,7 @@ public class Accounts extends fflib_SObjectDomain
     			if(oldRecord.Rating != null && acc.Rating != oldRecord.Rating)
     				acc.Rating.addError('You cannot modify the rating if added once');
     		}
-    		acc.Description = 'Comment through trigger class';
+    		acc.Description = 'Comment through trigger class!!';
     	}
     }
 }
