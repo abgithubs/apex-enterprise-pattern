@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Accounts</members>
+        <members>AccountsSelector</members>
+        <members>AccountsService</members>
+        <members>IAccountsService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountsTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>36.0</version>
+</Package>
