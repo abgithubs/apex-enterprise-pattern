@@ -1,4 +1,4 @@
-public with sharing class AccountsService implements IAccountsService
+global with sharing class AccountsService implements IAccountsService
 {
 	public static void updateContactIdsInAccounts(String contactId)
 	{
@@ -7,6 +7,7 @@ public with sharing class AccountsService implements IAccountsService
 				Account.SObjectType
 			}
 		);
+		
 		List<Account> accounts = new AccountsSelector().getAccountsWithContacts(10);
 		for(Account acc : accounts)
 		{
@@ -40,7 +41,7 @@ public with sharing class AccountsService implements IAccountsService
 		}
 	}
 	
-	public static Id insertAccount(String accountName, String actNumber, String actType)
+	global static Id insertAccount(String accountName, String actNumber, String actType, String dummy)
 	{
 		fflib_SObjectUnitOfWork uow = new fflib_SObjectUnitOfWork(
 			new Schema.SObjectType[] {
@@ -86,7 +87,7 @@ public with sharing class AccountsService implements IAccountsService
 		}
 	}
 	
-	public class AccountWrapper
+	global class AccountWrapper
 	{
 		public String accountName {get; set;}
 		public String accountNumber {get; set;}
